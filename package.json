@@ -1,6 +1,6 @@
 {
   "name": "@messageraft/maildev",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Maildev provider package for Messageraft server",
   "keywords": [
     "javascript",
@@ -57,7 +57,7 @@
     "typescript": "^4.4.2"
   },
   "dependencies": {
-    "@messageraft/common": "^0.0.4",
+    "@messageraft/common": "^0.0.5",
     "nodemailer": "^6.6.5"
   }
 }

@@ -2,22 +2,23 @@ import {
   EmailProvider,
   ProviderName,
   ProviderType,
-  MaildevEmailOptions, MaildevConstructorOptions,
+  MaildevEmailOptions,
+  MaildevConstructorOptions,
 } from '@messageraft/common'
-import nodemailer, {Transporter} from 'nodemailer'
-import SMTPTransport from "nodemailer/lib/smtp-transport";
-import Mail from "nodemailer/lib/mailer";
+import nodemailer, { Transporter } from 'nodemailer'
+import SMTPTransport from 'nodemailer/lib/smtp-transport'
+import Mail from 'nodemailer/lib/mailer'
 
 class SendGridProvider extends EmailProvider {
   name = ProviderName.MAILDEV
   type = ProviderType.EMAIL
-  smtpTransport: Transporter<SMTPTransport.SentMessageInfo>;
+  smtpTransport: Transporter<SMTPTransport.SentMessageInfo>
 
   constructor(options: MaildevConstructorOptions) {
     super()
     this.smtpTransport = nodemailer.createTransport({
       port: options?.port || 1025,
-      ignoreTLS: true
+      ignoreTLS: true,
     })
   }
 
